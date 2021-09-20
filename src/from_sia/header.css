@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+
+/* ///// reset ///// */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #333;
+  background: #fff;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, "Roboto", Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* ///// header ///// */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  padding: 0 50px;
+  background: rgba(43, 46, 74, 0.7);
+}
+.logobox {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  margin-top: -3px;
+  font-size: 40px;
+  color: #fff;
+  font-family: "Paytone One", sans-serif;
+  text-transform: uppercase;
+}
+.logo span {
+  color: #f771d1;
+}
+#trigger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+#trigger span {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+}
+.topmenu a {
+  margin-left: 16px;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* ///// footer ///// */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 210px;
+  padding: 0 285px;
+  bottom: 0;
+  color: #707070;
+  border-top: 1px solid #979797;
+  border-bottom: 1px solid #979797;
+}
+.footerleft h6 {
+  margin-bottom: 5px;
+}
+.footerleft h6,
+.footerleft p {
+  font-size: 16px;
+}
+.footerright {
+  display: flex;
+  align-items: center;
+}
+.footerright .footersnsbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 114px;
+  height: 35px;
+  margin: 0 30px;
+  font-size: 35px;
+  color: #979797;
+}
+.footerright .sitemap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  height: 25px;
+  padding: 0 5px;
+  font-size: 14px;
+  border: 1px solid #d5d5d5;
+}

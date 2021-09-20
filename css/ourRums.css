@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* common style */
+ul li { list-style:none;}
+a { display:block; text-decoration:none; border:0; outline:0; }
+.clear { clear:both; }
+section span { color:#FDA3FF;} /* Point Color*/
+
+/* LOGO FONT */
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+/* font-family: 'Paytone One', sans-serif; */
+
+/* <h2> FONT */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+/* font-family: 'Abril Fatface', cursive; */
+
+/* <h3> FONT */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap');
+/* font-family: 'Gowun Batang', serif; */
+
+/* <h4> FONT */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+/* font-family: 'Lora', serif; */
+
+/* body FONT */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+
+/* ///// FHD ////// */
+.subTitleBox {
+    height:580px;
+    background:url(../imgs/ourRumsTitleBoxImg.png) no-repeat center; background-size:cover;
+    margin-bottom:120px;
+}
+.subTitle {
+    position:absolute; left:50%; top:345px; 
+    width:416px; height:58px;
+    transform:translateX(-50%);
+    background:url(../imgs/ourRumsTitleTxt.png) no-repeat center;
+    background-size:cover;
+}
+h3 { 
+    text-align:center; font-family: 'Gowun Batang', serif; font-size:42px;
+}
+.h3_p {
+    width:620px; margin:0 auto;
+    text-align:center;
+}
+
+h4 {
+    margin:200px 0 -5px; text-align:center;
+    font-family: 'Lora', serif; font-size:42px; font-weight:bold;
+    text-transform:capitalize;
+}
+.h4_p { text-align:center; }
+
+.filterBox{ width:1300px; height:726px; margin:60px auto 0; background:#fc0;}
+.filterBox > ul > li { position:relative; }
