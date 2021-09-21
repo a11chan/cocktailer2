@@ -57,22 +57,22 @@ h4 {
 }
 .h4_p { text-align:center; }
 
-.filterBox{
+.filterBox {
     width:1300px; height:726px; margin:60px auto 120px;
-    padding:30px 60px;
-    border:10px solid #F4F4F6; border-radius:10px;     
+    padding:10px;
+    background: #F4F4F6; border-radius:10px;  
 }
+.filterBoxInner {
+    width:1280px; height:706px;
+    padding:30px 60px; background:#fc0;
+    background:#fff; border-radius:10px; 
+}
+
 
 #pickingBox > li { position:relative; margin-bottom:10px; }
 #pickingBox > li:nth-child(4) { margin-bottom:20px; }
-#pickingBox li a {
-    width:176px; height:62px; z-index:-1;
-    font-size:24px; color: #9542bf; text-transform:uppercase;
-    text-align:center; line-height:60px;
-    background: linear-gradient(to bottom, #FCB5E0 10%, #EECCEC 95%);
-    border-radius: 10px 0 0 10px;
-}
-.pickingBoxDesc, .pickedBox { position:absolute; left:176px; top:0; }
+#pickingBox > li:nth-child(8) { margin-bottom:30px; }
+.pickingBoxDesc, .pickedBox { position:absolute; left:175px; top:0; }
 .pickingBoxDesc, .pickedBox li {
     width:981px; height:62px; padding:0 15px;
     font-size:24px; color:#333; line-height:57px; 
@@ -80,4 +80,97 @@ h4 {
     border-radius:0 10px 10px 0;
 }
 
-.carouselBox { display:none; }
+
+/* 필터 항목 관련 디자인 및 누르면 나타나는 효과들 */
+#pickingBox > li > input { display:none; }
+#pickingBox > li > label {
+    display:block;
+    width:176px; height:62px; z-index:9;
+    font-size:24px; color: #9542bf; text-transform:uppercase;
+    text-align:center; line-height:60px;
+    background: linear-gradient(to bottom, #FCB5E0 10%, #EECCEC 95%);
+    border-radius: 10px 0 0 10px;
+}
+#pickingBox > li:nth-child(-n+4) > label:hover {
+    z-index:9;
+    cursor: pointer;
+    line-height:58px; color:#333; background:#fff;
+    border:solid 1px #f5d1e9;
+}
+#pickingBox > li > label:hover + div {
+    position:absolute; left:175px; top:1px; z-index:10;
+    width:1px; height:60px; background:#fff;
+}
+
+#pickingBox > li > input:checked ~ label {
+    z-index:9;
+    cursor: pointer;
+    line-height:58px; color:#333; background:#fff;
+    border:solid 1px #f5d1e9;
+}
+#pickingBox > li > input:checked ~ div {
+    position:absolute; left:175px; top:1px; z-index:10;
+    width:1px; height:60px; background:#fff;
+}
+
+/* 서브메뉴 등장 스위치 */
+#pickingBox > li > input:checked ~ .submenuNose { display:block; }
+#pickingBox > li > input:checked ~ .submenuPalate { display:block; }
+#pickingBox > li > input:checked ~ .submenuFinish { display:block; }
+#pickingBox > li > input:checked ~ .submenuType { display:block; }
+
+/* 서브메뉴 형태 */
+.submenu {
+    position:absolute; z-index:1;
+    display:none; padding:0 20px;
+    width:981px; height:278px;
+    background:#fff; border:1px solid #f5d1e9;
+    border-radius:0 10px 10px 0;
+    transition: all .4s ease-in; /* 작동 안하는 이유 불명 */
+}
+.submenuNose { left:175px; top:0; }
+.submenuPalate { left:175px; top:-72px; }
+.submenuFinish { left:175px; top:-144px; }
+.submenuType { left:175px; top:-216px; }
+
+.submenu input { display:none; }
+.submenu input:checked + label {
+    color:#9542bf; text-shadow:0 0 2px #9542bf;
+}
+.submenu label {
+    display:block; float:left;
+    padding:10px 30px 10px 10px;
+    cursor:pointer;
+    font-size:24px; text-transform:uppercase;
+}
+
+.filterBoxInner > button {
+    display:block; margin:0 auto; padding-bottom:4px;
+    width:120px; height:40px;
+    border-radius:40px;
+    cursor:pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:16px; color:#333; text-transform:capitalize;
+    background:#fff; border:2px solid #808292;
+
+}
+.filterBoxInner > button:hover {
+    color:#fff;
+    background:#808292;
+    border:0;
+}
+
+
+
+/* 럼 출력 슬라이더 */
+.subTitleBox {
+    height:580px;
+    background:url(../imgs/ourRumsTitleBoxImg.png) no-repeat center; background-size:cover;
+    margin-bottom:120px;
+}
+.carouselBox {
+    height:855px;
+    background:url(../imgs/ourRumsCarouselBoxBg.png) no-repeat center;
+    background-size:cover;
+}
+.carouselBox div { display:none; }

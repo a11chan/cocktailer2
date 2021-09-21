@@ -12,6 +12,11 @@
 <link rel="stylesheet" href="./css/ourRums.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+<!-- @import 적용 불가하여 삽입, 원인불명 -->
+
 <script src="./js/script.js"></script>
 
 </head>
@@ -34,121 +39,268 @@
     </header>
     
     <section>
-        <div class="subTitleBox"></div>
-        <div class="subTitle"></div>
-        <h3>태양이 스며든 듯한, <span>럼</span>을 원하는 스타일로 즐기기</h3>
+        <div class="subTitleBox"></div> <!--이미지 처리-->
+        <div class="subTitle"></div> <!--이미지 처리-->
+        <h3 class="sub2title">태양이 스며든 듯한, <span>럼</span>을 원하는 스타일로 즐기기</h3>
         <p class="h3_p">배달 음식이나 편의점 과자, 주말에 만드는 솥밥과 국민 간식 분식에 <span>경쾌</span>하게 맞아 떨어지는 <span>칵테일</span>을 곁들여 <span>두 배 맛있는 한 끼</span>를 즐길 수 있다면? </p>
 
         <h4><span>pick</span> your taste</h4>
         <p class="h4_p">원하는 색과 향으로 나만의 칵테일을 완성하세요.</p>
-
+        
         <div class="filterBox">
-            <ul id="pickingBox">
-                <li>
-                    <a href="#">nose</a>
-                    <ul class="pickingBoxDesc">
-                        <li>럼 가까이에서 코로 숨을 들이마셨을 때 나는 향의 느낌</li>
-                    </ul>
-                    <!-- <ul class="submenu">
-                        <li>fruit</li>
-                        <li>almonds</li>
-                        <li>banana-leaf</li>
-                        <li>butter</li>
-                        <li>cinnamon</li>
-                        <li>dried-apricot</li>
-                        <li>nutty</li>
-                        <li>peach</li>
-                        <li>toasted</li>
-                        <li>vanilla</li>
-                    </ul> -->
-                </li>
-                <li>
-                    <a href="#">palate</a>
-                    <ul class="pickingBoxDesc">
-                        <li>럼을 입 안에 머금었을 때 혀로 느껴지는 맛의 느낌</li>
-                    </ul>
-                    <!-- <ul class="submenu">
-                        <li>banana</li>
-                        <li>chocolate</li>
-                        <li>clove</li>
-                        <li>creamy</li>
-                        <li>dark-honey</li>
-                        <li>medium-bodied</li>
-                        <li>oak</li>
-                        <li>pear</li>
-                        <li>raisin</li>
-                        <li>rich</li>
-                        <li>smooth</li>
-                        <li>spiced</li>
-                        <li>sweet</li>
-                        <li>toasted</li>
-                        <li>tropical</li>
-                    </ul> -->
-                </li>
-                <li>
-                    <a href="#">finish</a>
-                    <ul class="pickingBoxDesc">
-                        <li>럼을 삼킨 후 숨을 내쉴 때 코와 입 안에서 나는 향의 느낌</li>
-                    </ul>
-                    <!-- <ul class="submenu">
-                        <li>black-pepper</li>
-                        <li>cinnamon</li>
-                        <li>clean</li>
-                        <li>dry</li>
-                        <li>expansive</li>
-                        <li>fudge</li>
-                        <li>molasses</li>
-                        <li>oak</li>
-                        <li>pineapple</li>
-                        <li>raisin</li>
-                        <li>smoky</li>
-                        <li>sweet</li>
-                        <li>toffee</li>
-                        <li>well-rounded</li>
-                    </ul> -->
-                </li>
-                <li>
-                    <a href="#">type</a>
-                    <ul class="pickingBoxDesc">
-                        <li>럼의 종류에 따른 구분</li>
-                    </ul>
-                    <!-- <ul class="submenu">
-                        <li>white</li>
-                        <li>dark</li>
-                        <li>gold</li>
-                        <li>dark gold</li>
-                        <li>spiced</li>
-                        <li>blended</li>
-                    </ul> -->
-                </li>
-
-                <li>
-                    <a href="#">nose</a>
-                    <ul class="pickedBox">
-                        <li></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">palate</a>
-                    <ul class="pickedBox">
-                        <li></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">finish</a>
-                    <ul class="pickedBox">
-                        <li></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">type</a>
-                    <ul class="pickedBox">
-                        <li></li>
-                    </ul>
-                </li>
-            </ul>
-
-
+            <div class="filterBoxInner">
+                <ul id="pickingBox">
+                    <li>
+                        <input type="checkbox" id="noseBtn">
+                        <label for="noseBtn">nose</label>
+                        <div class="blindNose"></div>
+                        <ul class="pickingBoxDesc">
+                            <li>럼 가까이에서 코로 숨을 들이마셨을 때 나는 향의 느낌</li>
+                        </ul>
+                        <ul class="submenuNose submenu">
+                            <li>
+                                <input type="checkbox" id="n_fruit" name="pick_info" value="n_fruit">
+                                <label for="n_fruit">fruit</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="n_almonds" name="pick_info" value="n_almonds">
+                                <label for="n_almonds">almonds</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="n_banana-leaf" name="pick_info" value="n_banana-leaf">
+                                <label for="n_banana-leaf">banana-leaf</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="n_butter" name="pick_info" value="n_butter">
+                                <label for="n_butter">butter</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="n_cinnamon" name="pick_info" value="n_cinnamon">
+                                <label for="n_cinnamon">cinnamon</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="n_dried-apricot" name="pick_info" value="n_dried-apricot">
+                                <label for="n_dried-apricot">dried-apricot</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="n_nutty" name="pick_info" value="n_nutty">
+                                <label for="n_nutty">nutty</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="n_peach" name="pick_info" value="n_peach">
+                                <label for="n_peach">peach</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="n_toasted" name="pick_info" value="n_toasted">
+                                <label for="n_toasted">toasted</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="n_vanilla" name="pick_info" value="n_vanilla">
+                                <label for="n_vanilla">vanilla</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="palateBtn">
+                        <label for="palateBtn">palate</label>
+                        <div class="blindPalate"></div>
+                        <ul class="pickingBoxDesc">
+                            <li>럼을 입 안에 머금었을 때 혀로 느껴지는 맛의 느낌</li>
+                        </ul>
+                        <ul class="submenuPalate submenu">
+                            <li>
+                                <input type="checkbox" id="p_banana" name="pick_info" value="p_banana">
+                                <label for="p_banana">banana</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_chocolate" name="pick_info" value="p_chocolatea">
+                                <label for="p_chocolate">chocolate</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_clove" name="pick_info" value="p_clove">
+                                <label for="p_clove">clove</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_creamy" name="pick_info" value="p_creamy">
+                                <label for="p_creamy">creamy</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_dark-honey" name="pick_info" value="p_dark-honey">
+                                <label for="p_dark-honey">dark-honey</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_medium-bodied" name="pick_info" value="p_medium-bodied">
+                                <label for="p_medium-bodied">medium-bodied</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_oak" name="pick_info" value="p_oak">
+                                <label for="p_oak">oak</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_pear" name="pick_info" value="p_pear">
+                                <label for="p_pear">pear</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_raisin" name="pick_info" value="p_raisin">
+                                <label for="p_raisin">raisin</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_rich" name="pick_info" value="p_rich">
+                                <label for="p_rich">rich</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_smooth" name="pick_info" value="p_smooth">
+                                <label for="p_smooth">smooth</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_spiced" name="pick_info" value="p_spiced">
+                                <label for="p_spiced">spiced</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_sweet" name="pick_info" value="p_sweet">
+                                <label for="p_sweet">sweet</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_toasted" name="pick_info" value="p_toasted">
+                                <label for="p_toasted">toasted</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="p_tropical" name="pick_info" value="p_tropical">
+                                <label for="p_tropical">tropical</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="finishBtn">
+                        <label for="finishBtn">finish</label>
+                        <div class="blindFinish"></div>
+                        <ul class="pickingBoxDesc">
+                            <li>럼을 삼킨 후 숨을 내쉴 때 코와 입 안에서 나는 향의 느낌</li>
+                        </ul>
+                        <ul class="submenuFinish submenu">
+                            <li>
+                                <input type="checkbox" id="f_black-pepper" name="pick_info" value="f_black-pepper">
+                                <label for="f_black-pepper">black-pepper</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_cinnamon" name="pick_info" value="f_cinnamon">
+                                <label for="f_cinnamon">cinnamon</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_clean" name="pick_info" value="f_clean">
+                                <label for="f_clean">clean</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_dry" name="pick_info" value="f_dry">
+                                <label for="f_dry">dry</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_expansive" name="pick_info" value="f_expansive">
+                                <label for="f_expansive">expansive</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_fudge" name="pick_info" value="f_fudge">
+                                <label for="f_fudge">fudge</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_molasses" name="pick_info" value="f_molasses">
+                                <label for="f_molasses">molasses</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_oak" name="pick_info" value="f_oak">
+                                <label for="f_oak">oak</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_pineapple" name="pick_info" value="f_pineapple">
+                                <label for="f_pineapple">pineapple</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_raisin" name="pick_info" value="f_raisin">
+                                <label for="f_raisin">raisin</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_smoky" name="pick_info" value="f_smoky">
+                                <label for="f_smoky">smoky</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_sweet" name="pick_info" value="f_sweet">
+                                <label for="f_sweet">sweet</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_toffee" name="pick_info" value="f_toffee">
+                                <label for="f_toffee">toffee</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="f_well-rounded" name="pick_info" value="f_well-rounded">
+                                <label for="f_well-rounded">well-rounded</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="typeBtn">
+                        <label for="typeBtn">type</label>
+                        <div class="blindType"></div>
+                        <ul class="pickingBoxDesc">
+                            <li>럼의 종류에 따른 구분</li>
+                        </ul>
+                        <ul class="submenuType submenu">
+                            <li>
+                                <input type="checkbox" id="t_white" name="pick_info" value="t_white">
+                                <label for="t_white">white</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="t_dark" name="pick_info" value="t_dark">
+                                <label for="t_dark">dark</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="t_gold" name="pick_info" value="t_gold">
+                                <label for="t_gold">gold</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="t_dark-gold" name="pick_info" value="t_dark-gold">
+                                <label for="t_dark-gold">dark-gold</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="t_spiced" name="pick_info" value="t_spiced">
+                                <label for="t_spiced">spiced</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="t_blended" name="pick_info" value="t_blended">
+                                <label for="t_blended">blended</label>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="nose2Btn">
+                        <label for="nose2Btn">nose</label>
+                        <ul class="pickedBox">
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="palate2Btn">
+                        <label for="palate2Btn">palate</label>
+                        <ul class="pickedBox">
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="finish2Btn">
+                        <label for="finish2Btn">finish</label>
+                        <ul class="pickedBox">
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="type2Btn">
+                        <label for="type2Btn">type</label>
+                        <ul class="pickedBox">
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button type="button">search</button>
+            </div>
         </div>
     </section>
     <section> <!--dropdown, flexslider-->
