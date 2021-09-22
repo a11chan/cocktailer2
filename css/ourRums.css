@@ -97,27 +97,22 @@ h4 {
     line-height:58px; color:#333; background:#fff;
     border:solid 1px #f5d1e9;
 }
-#pickingBox > li > label:hover + div {
+#pickingBox > li:nth-child(-n+4) > label:hover + div {
     position:absolute; left:175px; top:1px; z-index:10;
     width:1px; height:60px; background:#fff;
 }
 
-#pickingBox > li > input:checked ~ label {
+#pickingBox > li:nth-child(-n+4) > input:checked ~ label {
     z-index:9;
     cursor: pointer;
     line-height:58px; color:#333; background:#fff;
     border:solid 1px #f5d1e9;
 }
-#pickingBox > li > input:checked ~ div {
+#pickingBox > li:nth-child(-n+4) > input:checked ~ div {
     position:absolute; left:175px; top:1px; z-index:10;
     width:1px; height:60px; background:#fff;
 }
 
-/* 서브메뉴 등장 스위치 */
-#pickingBox > li > input:checked ~ .submenuNose { display:block; }
-#pickingBox > li > input:checked ~ .submenuPalate { display:block; }
-#pickingBox > li > input:checked ~ .submenuFinish { display:block; }
-#pickingBox > li > input:checked ~ .submenuType { display:block; }
 
 /* 서브메뉴 형태 */
 .submenu {
@@ -133,6 +128,9 @@ h4 {
 .submenuFinish { left:175px; top:-144px; }
 .submenuType { left:175px; top:-216px; }
 
+
+/* 서브메뉴 안 컨텐츠 */
+.submenu label { float:left; }
 .submenu input { display:none; }
 .submenu input:checked + label {
     color:#9542bf; text-shadow:0 0 2px #9542bf;
@@ -144,6 +142,15 @@ h4 {
     font-size:24px; text-transform:uppercase;
 }
 
+
+/* 서브메뉴 등장 스위치 */
+#pickingBox > li > input:checked ~ .submenuNose { display:block; }
+#pickingBox > li > input:checked ~ .submenuPalate { display:block; }
+#pickingBox > li > input:checked ~ .submenuFinish { display:block; }
+#pickingBox > li > input:checked ~ .submenuType { display:block; }
+
+
+/* 조건에 맞는 럼 출력 스위치 */
 .filterBoxInner > button {
     display:block; margin:0 auto; padding-bottom:4px;
     width:120px; height:40px;
@@ -163,14 +170,59 @@ h4 {
 
 
 /* 럼 출력 슬라이더 */
-.subTitleBox {
-    height:580px;
-    background:url(../imgs/ourRumsTitleBoxImg.png) no-repeat center; background-size:cover;
-    margin-bottom:120px;
+.itemShow { position:relative; }
+.toLeft{
+    z-index:9; position:absolute; bottom:calc(50% - 50px); left:130px;
+}
+.toRight{
+    z-index:9; position:absolute; bottom:calc(50% - 50px); right:130px;
 }
 .carouselBox {
+    padding: 90px 260px 120px;
     height:855px;
     background:url(../imgs/ourRumsCarouselBoxBg.png) no-repeat center;
     background-size:cover;
+    overflow:hidden;
+    white-space: nowrap;
 }
-.carouselBox div { display:none; }
+.itemBox {
+    display:inline-block;
+    position:relative;
+    padding:50px; margin:auto 25px;
+    width:400px; height:645px;
+    border-radius:30px;
+    border: 3px solid rgba(255,255,255,.5);
+}
+.itemBox > .itemImg {
+    width:300px; height:300px;
+    margin-bottom:45px;
+    border-radius:300px;
+    object-fit:cover;
+}
+.itemBox > h5 {
+    margin-bottom:30px;
+    font-size:18px; color:#e2e2e2;
+    text-align:center; text-transform:uppercase;
+}
+.itemBox > p {
+    white-space: normal;
+    font-size:18px; color:#e2e2e2; text-align:center;
+}
+
+.itemBox > button {
+    display:block; margin:0 auto;
+    position:absolute; left:calc(50% - 60px); bottom:50px;
+    width:120px; height:40px;
+    border-radius:40px;
+    cursor:pointer;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:16px; color:#fff; text-transform:capitalize;
+    background:rgba(255,255,255,0);
+    box-shadow: 2px 2px 1px rgba(3,3,3,.3);
+
+}
+.itemBox > button:hover {
+    color:#fff;
+    background:#808292;
+    border:0;
+}
