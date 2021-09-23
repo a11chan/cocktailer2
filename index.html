@@ -10,7 +10,6 @@
 <link rel="stylesheet" href="./css/header.css">
 <link rel="stylesheet" href="./css/footer.css">
 <link rel="stylesheet" href="./css/ourRums.css">
-<link rel="stylesheet" href="./flexSlider/flexslider.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +17,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
 <!-- @import 적용 불가하여 삽입, 원인불명 -->
 
-<script src="./flexSlider/jquery.flexslider-min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="./js/script.js"></script>
 
 </head>
@@ -53,7 +52,7 @@
             <div class="filterBoxInner">
                 <ul id="pickingBox">
                     <li>
-                        <input type="radio" name="taste" id="noseBtn">
+                        <input type="checkbox" name="taste" id="noseBtn">
                         <label for="noseBtn">nose</label>
                         <div class="blindNose"></div>
                         <ul class="pickingBoxDesc">
@@ -92,7 +91,7 @@
                         </ul>
                     </li>
                     <li>
-                        <input type="radio" name="taste" id="palateBtn">
+                        <input type="checkbox" name="taste" id="palateBtn">
                         <label for="palateBtn">palate</label>
                         <div class="blindPalate"></div>
                         <ul class="pickingBoxDesc">
@@ -146,7 +145,7 @@
                         </ul>
                     </li>
                     <li>
-                        <input type="radio" name="taste"  id="finishBtn">
+                        <input type="checkbox" name="taste"  id="finishBtn">
                         <label for="finishBtn">finish</label>
                         <div class="blindFinish"></div>
                         <ul class="pickingBoxDesc">
@@ -197,7 +196,7 @@
                         </ul>
                     </li>
                     <li>
-                        <input type="radio" name="taste"  id="typeBtn">
+                        <input type="checkbox" name="taste"  id="typeBtn">
                         <label for="typeBtn">type</label>
                         <div class="blindType"></div>
                         <ul class="pickingBoxDesc">
@@ -259,35 +258,54 @@
 
 
     <section class="itemShow">
-        <!--
-            화살표 label로 바꾸고 배경으로 처리
-            itemBox는 3개까지만 보이게 하고
-            화살표 누르면 이동하면서 사라지게
-        -->
         <img class="toLeft" src="./imgs/toLeft.png" alt="left">
         <img class="toRight" src="./imgs/toRight.png" alt="right">
         <div class="carouselBox">
-            <div class="itemBox">
+            <div class="itemBox n_almonds n_fruit p_smooth p_creamy f_dry f_clean t_white">
                 <img class="itemImg" src="./imgs/filterItem/1CARTA_BLANCA.jpg" alt="blanca">
                 <h5>carta blanca</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</p>
                 <a >자세히 보기</a>
             </div>
-            <div class="itemBox">
+            <div class="itemBox n_vanilla n_cinnamon p_sweet p_spiced f_black-pepper f_fudge t_spiced">
                 <img class="itemImg" src="./imgs/filterItem/2SPICED.jpg" alt="spiced">
                 <h5>spiced</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</p>
                 <a>자세히 보기</a>
             </div>
-            <div class="itemBox">
+            <div class="itemBox n_nutty n_butter p_rich p_toasted f_dry f_sweet t_gold">
                 <img class="itemImg" src="./imgs/filterItem/3CARTA ORO.jpg" alt="oro">
                 <h5>carta oro</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</p>
                 <a>자세히 보기</a>
             </div>
-            <div class="itemBox">
+            <div class="itemBox n_toasted n_nutty p_tropical p_medium-bodied f_smoky f_molasses t_dark">
                 <img class="itemImg" src="./imgs/filterItem/4CARTA NEGRA.jpg" alt="negra">
                 <h5>carta negra</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</p>
+                <a>자세히 보기</a>
+            </div>
+            <div class="itemBox n_vanilla n_cinnamon p_dark-honey p_clove f_toffee f_oak t_gold">
+                <img class="itemImg" src="./imgs/filterItem/5AÑEJO CUATRO.jpg" alt="cuatro">
+                <h5>AÑEJO CUATRO</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</p>
+                <a>자세히 보기</a>
+            </div>
+            <div class="itemBox n_dried-apricot n_banana-left p_oak p_spiced f_expansive f_well-rounded t_dark">
+                <img class="itemImg" src="./imgs/filterItem/6RESERVA OCHO.jpg" alt="ocho">
+                <h5>RESERVA OCHO</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</p>
+                <a>자세히 보기</a>
+            </div>
+            <div class="itemBox n_almonds n_peach p_banana p_pear p_vanilla f_pineapple f_cinnamon t_dark-gold">
+                <img class="itemImg" src="./imgs/filterItem/7RESERVA DIEZ.jpg" alt="diez">
+                <h5>GRAN RESERVA DIEZ</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</p>
+                <a>자세히 보기</a>
+            </div>
+            <div class="itemBox n_almonds n_vanilla p_raisin p_chocolate f_oak f_raisin t_blended">
+                <img class="itemImg" src="./imgs/filterItem/8GRAN RESERVA LIMITADA.jpg" alt="limitada">
+                <h5>GRAN RESERVA LIMITADA</h5>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta</p>
                 <a>자세히 보기</a>
             </div>
