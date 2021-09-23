@@ -10,6 +10,6 @@ $(document).ready(function () {
     var targetClass = targetValue.join(", ");
     targetList.hide();
     $(targetClass).fadeIn();
-    console.log(targetClass);
+    // console.log(targetClass);
     });
 });
