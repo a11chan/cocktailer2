@@ -7,9 +7,22 @@ $(document).ready(function () {
     tasteFilter.filter(":checked").each(function () {
         targetValue.push("." + $(this).val());
     });
+
     var targetClass = targetValue.join(", ");
     targetList.hide();
     $(targetClass).fadeIn();
-    // console.log(targetClass);
+
+    console.log(targetClass);
     });
+
+    $(".toLeft").click(function(){
+        $('.carouselBox').stop().animate({scrollLeft: "-=200"}, 30, 'swing');
+        return false;
+    });
+    $(".toRight").click(function(){
+        $('.carouselBox').stop().animate({scrollLeft: "+=200"}, 30, 'swing');
+        return false;
+    });
+
+
 });
