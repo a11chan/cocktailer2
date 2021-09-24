@@ -18,12 +18,13 @@ https://a11chan.github.io/cocktailer2/
 
 
 타이틀의 서브텍스트 각자 페이지에 맞게 수정(PSD, WEB)
-TB 타이틀 행간 SM에 맞게 줄이기(PSD)
 
+TB 타이틀 행간 SM에 맞게 줄이기(PSD)
 
 HD, TAB, SM 사이즈에 맞게 CSS스타일링
 
 
+### Done
 ~~체크박스 버튼 사용~~
 
 ~~조건에 맞는 럼만 출력되게~~
