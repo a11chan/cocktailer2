@@ -183,7 +183,8 @@ h4 {
 
 
 
-/* 선택된 항목 보여주는 공간 */
+/* submenu2 선택된 항목 출력 */
+
 .pickedBox > li {
     display:flex; align-items:center;
     overflow:hidden;
@@ -214,8 +215,6 @@ h4 {
 }
 
 
-
-   
 
 
 
