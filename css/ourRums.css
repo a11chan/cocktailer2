@@ -79,14 +79,17 @@ h4 {
     border:1px solid #f5d1e9;
     border-radius:0 10px 10px 0;
 }
-.pickingBoxDesc {
-    border-left:none;
-}
 
 /* 블라인드 */
 #pickingBox > li > .blind2 {
-    position:absolute; left:175px; top:62px; z-index:9;
+    z-index:9;
+    position:absolute; left:175px; top:62px;
     width:2px; height:10px; background:#fff;
+}
+#pickingBox > li > .blind3 {
+    z-index:2;
+    position:absolute; left:176px; top:1px;
+    width:1px; height:60px; background:#fff;
 }
 
 /* 필터 항목 관련 디자인 및 누르면 나타나는 효과들 */
@@ -109,7 +112,7 @@ h4 {
 #pickingBox > li:nth-child(-n+4) > label:hover + div {
     z-index:11;
     position:absolute; left:175px; top:1px;
-    width:3px; height:60px; background:#fff;
+    width:2px; height:60px; background:#fff;
 }
 
 #pickingBox > li:nth-child(-n+4) > input:checked ~ label {
@@ -121,7 +124,7 @@ h4 {
 #pickingBox > li:nth-child(-n+4) > input:checked ~ div {
     z-index:11;
     position:absolute; left:175px; top:1px;
-    width:3px; height:60px; background:#fff;
+    width:2px; height:60px; background:#fff;
 }
 
 
@@ -136,7 +139,7 @@ h4 {
     width:0;
     overflow:hidden;
     background:#fff;
-    border:1px solid #f5d1e9;
+    border:1px solid #f5d1e9; /* 얘를 가리기 위한 블라인드 필요, 전체 길이에 추가됨*/
     border-radius:0 10px 10px 0;
     transition: all .4s ease-in; /* 작동 안하는 이유 불명 */
 }
