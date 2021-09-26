@@ -79,7 +79,15 @@ h4 {
     border:1px solid #f5d1e9;
     border-radius:0 10px 10px 0;
 }
+.pickingBoxDesc {
+    border-left:none;
+}
 
+/* 블라인드 */
+#pickingBox > li > .blind2 {
+    position:absolute; left:175px; top:62px; z-index:9;
+    width:2px; height:10px; background:#fff;
+}
 
 /* 필터 항목 관련 디자인 및 누르면 나타나는 효과들 */
 #pickingBox > li > input { display:none; }
@@ -89,34 +97,38 @@ h4 {
     font-size:24px; color: #9542bf; text-transform:uppercase;
     text-align:center; line-height:60px;
     background: linear-gradient(to bottom, #FCB5E0 10%, #EECCEC 95%);
+    border:solid 1px #f5d1e9;
     border-radius: 10px 0 0 10px;
+    transition: all .4s ease-in;
 }
 #pickingBox > li:nth-child(-n+4) > label:hover {
-    z-index:9;
+    z-index:11;
     cursor: pointer;
-    line-height:58px; color:#333; background:#fff;
-    border:solid 1px #f5d1e9;
+    line-height:60px; color:#333; background:#fff;
 }
 #pickingBox > li:nth-child(-n+4) > label:hover + div {
-    position:absolute; left:175px; top:1px; z-index:10;
-    width:1px; height:60px; background:#fff;
+    z-index:11;
+    position:absolute; left:175px; top:1px;
+    width:3px; height:60px; background:#fff;
 }
 
 #pickingBox > li:nth-child(-n+4) > input:checked ~ label {
-    z-index:9;
+    z-index:11;
     cursor: pointer;
-    line-height:58px; color:#333; background:#fff;
+    line-height:60px; color:#333; background:#fff;
     border:solid 1px #f5d1e9;
 }
 #pickingBox > li:nth-child(-n+4) > input:checked ~ div {
-    position:absolute; left:175px; top:1px; z-index:10;
-    width:1px; height:60px; background:#fff;
+    z-index:11;
+    position:absolute; left:175px; top:1px;
+    width:3px; height:60px; background:#fff;
 }
 
 
 /* 서브메뉴 형태 */
 .submenu {
     position:absolute; z-index:1;
+    left:175px;
     /* display:none; */
     /* padding:0 20px; */
     /* width:981px; */
@@ -124,24 +136,41 @@ h4 {
     width:0;
     overflow:hidden;
     background:#fff;
-    border:none;
-    /* border:1px solid #f5d1e9; */
+    border:1px solid #f5d1e9;
     border-radius:0 10px 10px 0;
     transition: all .4s ease-in; /* 작동 안하는 이유 불명 */
 }
-.submenuNose { left:175px; top:0; }
-.submenuPalate { left:175px; top:-72px; }
-.submenuFinish { left:175px; top:-144px; }
-.submenuType { left:175px; top:-216px; }
+.submenuNose { top:0; }
+.submenuPalate { top:-72px; }
+.submenuFinish { top:-144px; }
+.submenuType { top:-216px; }
 
+
+/* 서브메뉴 선택 후 모양 */
+#noseBtn:checked ~ .submenuNose {
+    z-index:10;
+    border:1px solid #f5d1e9; width:981px; padding:0 20px; 
+}    
+#palateBtn:checked ~ .submenuPalate {
+    z-index:10;
+    border:1px solid #f5d1e9; width:981px; padding:0 20px;
+}    
+#finishBtn:checked ~ .submenuFinish {
+    z-index:10;
+    border:1px solid #f5d1e9; width:981px; padding:0 20px;
+}    
+#typeBtn:checked ~ .submenuType {
+    z-index:10;
+    border:1px solid #f5d1e9; width:981px; padding:0 20px;
+} 
 
 
 /* 서브메뉴 내부 컨텐츠 */
-.submenu label { float:left; }
 .submenu input { display:none; }
 .submenu input:checked + label {
     color:#9542bf; text-shadow:0 0 2px #9542bf;
 }
+.submenu label { float:left; }
 .submenu label {
     display:block; float:left;
     padding:10px 30px 10px 10px;
@@ -150,6 +179,9 @@ h4 {
     transition: all .4s ease-in;
 }
 .submenu label:hover { color:#9542bf; }
+
+
+
 
 /* 선택된 항목 보여주는 공간 */
 .pickedBox > li {
@@ -183,19 +215,7 @@ h4 {
 
 
 
-/* 서브메뉴 등장 경우의 수 */
-#noseBtn:checked ~ .submenuNose {
-    border:1px solid #f5d1e9; width:981px; padding:0 20px; 
-}    
-#palateBtn:checked ~ .submenuPalate {
-    border:1px solid #f5d1e9; width:981px; padding:0 20px;
-}    
-#finishBtn:checked ~ .submenuFinish {
-    border:1px solid #f5d1e9; width:981px; padding:0 20px;
-}    
-#typeBtn:checked ~ .submenuType {
-    border:1px solid #f5d1e9; width:981px; padding:0 20px;
-}    
+   
 
 
 
