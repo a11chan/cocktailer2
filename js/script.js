@@ -25,4 +25,9 @@ $(document).ready(function () {
     });
 
 
+    $(".itemShow").hide();
+    $("#searchBtn").click(function(){
+        $(".itemShow").fadeToggle();
+    });
+
 });

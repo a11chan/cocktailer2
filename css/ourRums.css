@@ -117,10 +117,15 @@ h4 {
 /* 서브메뉴 형태 */
 .submenu {
     position:absolute; z-index:1;
-    display:none; padding:0 20px;
-    width:981px;
+    /* display:none; */
+    /* padding:0 20px; */
+    /* width:981px; */
     height:278px;
-    background:#fff; border:1px solid #f5d1e9;
+    width:0;
+    overflow:hidden;
+    background:#fff;
+    border:none;
+    /* border:1px solid #f5d1e9; */
     border-radius:0 10px 10px 0;
     transition: all .4s ease-in; /* 작동 안하는 이유 불명 */
 }
@@ -145,10 +150,18 @@ h4 {
 
 
 /* 서브메뉴 등장 경우의 수 */
-#noseBtn:checked ~ .submenuNose { display:block; }
-#palateBtn:checked ~ .submenuPalate { display:block; }
-#finishBtn:checked ~ .submenuFinish { display:block; }
-#typeBtn:checked ~ .submenuType { display:block; }
+#noseBtn:checked ~ .submenuNose {
+    border:1px solid #f5d1e9; width:981px; padding:0 20px; 
+}
+#palateBtn:checked ~ .submenuPalate {
+    border:1px solid #f5d1e9; width:981px; padding:0 20px;
+}
+#finishBtn:checked ~ .submenuFinish {
+    border:1px solid #f5d1e9; width:981px; padding:0 20px;
+}
+#typeBtn:checked ~ .submenuType {
+    border:1px solid #f5d1e9; width:981px; padding:0 20px;
+}
 
 
 /* 조건에 맞는 럼 출력 스위치 */
