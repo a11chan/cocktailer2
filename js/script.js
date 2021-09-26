@@ -18,6 +18,11 @@ $(document).ready(function () {
     // console.log(targetClass);
     });
 
+    /* 선택된 taste 모든 모양 먼저 만들고
+    $(targetClass).fadeIn(); 에 들어갈 클래스 이름이랑 같게 해서 보여지게 하기
+    선택된 항목을 클릭하면 필터링 취소되도록
+    체크박스로 만들고, 체크 해제되면 사라지게도
+    */
 
 
     // 라디오-체크박스 적용 (inline-block처럼 서로의 특징 혼합)
@@ -32,9 +37,10 @@ $(document).ready(function () {
     });
     $("#typeBtn").click(function(){
         $('input[name="taste"]').not("#typeBtn").prop("checked",false);
+        // console.log($("#noseBtn").is(":checked"))
     });
-    // console.log($("#noseBtn").is(":checked"))
     
+
 
     // 검색 결과 출력 토글
     $(".itemShow").hide();

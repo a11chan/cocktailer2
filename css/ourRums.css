@@ -74,7 +74,7 @@ h4 {
 #pickingBox > li:nth-child(8) { margin-bottom:30px; }
 .pickingBoxDesc, .pickedBox { position:absolute; left:175px; top:0; }
 .pickingBoxDesc, .pickedBox li {
-    width:981px; height:62px; padding:0 15px;
+    width:981px; height:62px; padding:0 20px;
     font-size:24px; color:#333; line-height:57px; 
     border:1px solid #f5d1e9;
     border-radius:0 10px 10px 0;
@@ -135,7 +135,8 @@ h4 {
 .submenuType { left:175px; top:-216px; }
 
 
-/* 서브메뉴 안 컨텐츠 */
+
+/* 서브메뉴 내부 컨텐츠 */
 .submenu label { float:left; }
 .submenu input { display:none; }
 .submenu input:checked + label {
@@ -146,22 +147,56 @@ h4 {
     padding:10px 30px 10px 10px;
     cursor:pointer;
     font-size:24px; text-transform:uppercase;
+    transition: all .4s ease-in;
 }
+.submenu label:hover { color:#9542bf; }
+
+/* 선택된 항목 보여주는 공간 */
+.pickedBox > li {
+    display:flex; align-items:center;
+    overflow:hidden;
+}
+.pickedBox input { display:none; }
+.pickedBox label {
+    position:relative;
+    margin-right:15px;
+    height:42px; padding:5px 50px 5px 20px;
+    line-height:27px; white-space:nowrap; color:#333;
+    text-transform:uppercase; text-align:center;
+    border:1px solid #9542bf;
+    border-radius:14px; cursor:pointer;
+    transition: all .4s ease-in;
+}
+.pickedBox label::after {
+    position:absolute;
+    top:10px; right:20px;
+    content:'×'; color:#fff;
+    font-size:15px; line-height:20px;
+    width:20px; height:20px; background:#333;
+    border-radius: 50%;
+}
+.pickedBox label:hover {
+    color:#9542bf;
+    border:1px solid #f5d1e9;
+    background:linear-gradient(to bottom, #FCB5E0 10%, #EECCEC 95%);
+}
+
 
 
 /* 서브메뉴 등장 경우의 수 */
 #noseBtn:checked ~ .submenuNose {
     border:1px solid #f5d1e9; width:981px; padding:0 20px; 
-}
+}    
 #palateBtn:checked ~ .submenuPalate {
     border:1px solid #f5d1e9; width:981px; padding:0 20px;
-}
+}    
 #finishBtn:checked ~ .submenuFinish {
     border:1px solid #f5d1e9; width:981px; padding:0 20px;
-}
+}    
 #typeBtn:checked ~ .submenuType {
     border:1px solid #f5d1e9; width:981px; padding:0 20px;
-}
+}    
+
 
 
 /* 조건에 맞는 럼 출력 스위치 */
