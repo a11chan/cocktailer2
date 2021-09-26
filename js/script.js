@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    
+    
+    // 조건 필터링
     var tasteFilter = $(".submenu input");
     var targetList = $(".carouselBox > .itemBox");
 
@@ -15,19 +18,21 @@ $(document).ready(function () {
     console.log(targetClass);
     });
 
-    $(".toLeft").click(function(){
-        $('.carouselBox').stop().animate({scrollLeft: "-=200"}, 30, 'swing');
-        return false;
-    });
-    $(".toRight").click(function(){
-        $('.carouselBox').stop().animate({scrollLeft: "+=200"}, 30, 'swing');
-        return false;
-    });
 
-
+    // 검색 결과 출력 토글
     $(".itemShow").hide();
     $("#searchBtn").click(function(){
         $(".itemShow").fadeToggle();
     });
+    
 
-});
+    // 좌우 스크롤
+    $(".toLeft").click(function(){
+        $('.carouselBox').animate({scrollLeft: "-=200"}, 30, 'swing');
+    });
+    $(".toRight").click(function(){
+        $('.carouselBox').animate({scrollLeft: "+=200"}, 30, 'swing');
+    });
+
+
+}); // end of jQuery

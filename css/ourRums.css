@@ -4,7 +4,7 @@
 ul li { list-style:none;}
 a { display:block; text-decoration:none; border:0; outline:0; }
 .clear { clear:both; }
-section span { color:#FDA3FF;} /* Point Color*/
+section span { color:#F771D1;} /* Point Color*/
 
 /* LOGO FONT */
 @import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
@@ -46,7 +46,7 @@ section span { color:#FDA3FF;} /* Point Color*/
     font-size:42px; font-weight:bold;
 }
 .h3_p {
-    width:620px; margin:0 auto;
+    width:490px; margin:0 auto;
     text-align:center;
 }
 
