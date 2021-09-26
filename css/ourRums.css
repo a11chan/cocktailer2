@@ -190,6 +190,7 @@ h4 {
     bottom:calc(50% - 50px); left:130px;
     cursor:pointer;
 }
+
 .toRight{
     z-index:9; position:absolute;
     bottom:calc(50% - 50px); right:130px;
