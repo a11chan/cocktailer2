@@ -10,6 +10,7 @@ $(document).ready(function () {
     tasteFilter.click(function () {
         targetList.hide();
         targetList2.hide();
+
         var targetValue = [];
         tasteFilter.filter(":checked").each(function () {
             targetValue.push("." + $(this).val());
@@ -17,7 +18,7 @@ $(document).ready(function () {
 
         var targetClass = targetValue.join(", ");
 
-        $(targetClass).fadeIn();
+        $(targetClass).fadeIn(); // 선택된 클래스 전부 표시(문서전체)
         console.log(targetClass);
 
     });
