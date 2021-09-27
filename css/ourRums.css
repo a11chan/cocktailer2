@@ -215,23 +215,25 @@ h4 {
 
 
 /* submenu2 overflow shading box */
-.pickedBox .shadeLeft1 {
+.pickedBox .shading{
     z-index:8;
-    position:absolute; left:1px; top:1px;
-    width:80px; height:60px;
+    position:absolute; width:70px; height:60px;
+}
+.pickedBox div[class*="left"] {
+    left:1px;
     background:
-    /* rgba(255,255,255,.3) */
     linear-gradient(to right,#fff 30%, rgba(33,33,33,0) 70%);
 }
-.pickedBox .shadeRight1 {
-    z-index:8;
-    position:absolute; right:1px; top:1px;
-    width:70px; height:60px;
-    border-radius:0 10px 10px 0;
+.pickedBox div[class*="right"] {
+    right:1px; border-radius:0 10px 10px 0;
     background:
-    /* rgba(255,255,255,.3) */
     linear-gradient(to left,#fff 30%, rgba(33,33,33,0) 70%);
 }
+.pickedBox div[class*="floor1"] { top:1px; }
+.pickedBox div[class*="floor2"] { top:calc(1px + 72px); }
+.pickedBox div[class*="floor3"] { top:calc(1px + 72px * 2); }
+.pickedBox div[class*="floor4"] { top:calc(1px + 72px * 3); }
+
 
 
 /* submenu2 선택된 항목 출력 */
