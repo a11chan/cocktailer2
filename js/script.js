@@ -4,6 +4,9 @@ $(document).ready(function () {
     // 조건 필터링
     var tasteFilter = $(".submenu input");
     var targetList = $(".carouselBox > .itemBox");
+    // var targetList2 = $(".pickedBox > li > label");
+    targetList.hide();
+    // targetList2.hide();
 
     tasteFilter.click(function () {
     var targetValue = [];
@@ -12,16 +15,20 @@ $(document).ready(function () {
     });
 
     var targetClass = targetValue.join(", ");
-    targetList.hide();
-    $(targetClass).fadeIn();
 
+
+    $(targetClass).fadeIn();
     // console.log(targetClass);
     });
+
 
     /* 선택된 taste 모든 모양 먼저 만들고
     $(targetClass).fadeIn(); 에 들어갈 클래스 이름이랑 같게 해서 보여지게 하기
     선택된 항목을 클릭하면 필터링 취소되도록
     체크박스로 만들고, 체크 해제되면 사라지게도
+
+    스크립트보다는 라벨이랑 체크박스 연동해서 처리 가능한지 우선 알아보기
+
     */
 
 
