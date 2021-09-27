@@ -5,20 +5,16 @@ https://a11chan.github.io/cocktailer2/
 
 
 ## To Do
-필터박스
-- taste 별로 좌우 화살표 추가
+미디어 쿼리 적용
 
-
-상품소개 섹션
-- 마우스 누르고 있는 중에도 스크롤 구현
-
-
-HD, TAB, SM 사이즈에 맞게 CSS스타일링
+마우스 누르고 있는 중에도 스크롤 구현
 
 
 &nbsp;
 &nbsp;
 ## Done
+taste 별로 좌우 화살표 추가
+
 필터 적용 토글링
 
 서브 메뉴 오른쪽 슬라이드 처리
