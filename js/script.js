@@ -14,7 +14,6 @@ $(document).ready(function () {
     tasteFilter.click(function () {
         targetList.hide();
         targetList2.hide();
-        chevron.fadeIn();
 
         var targetValue = [];
         tasteFilter.filter(":checked").each(function () {
@@ -25,6 +24,7 @@ $(document).ready(function () {
         $(targetClass).fadeIn(); // 선택된 클래스 전부 표시(문서전체)
         
         if (targetClass == "") { chevron.hide(); }
+        if (targetClass != "") { chevron.fadeIn(); }
         console.log(targetClass);
 
     });
@@ -58,10 +58,28 @@ $(document).ready(function () {
 
     // .pickedBox 좌우 스크롤
     $(".toLeft1").click(function(){
-        $('.pickedBox > li').animate({scrollLeft: "-=200"}, 30, 'swing');
+        $('.pickedBox > li').eq(0).animate({scrollLeft: "-=100"}, 30, 'swing');
     });
     $(".toRight1").click(function(){
-        $('.pickedBox > li').animate({scrollLeft: "+=200"}, 30, 'swing');
+        $('.pickedBox > li').eq(0).animate({scrollLeft: "+=100"}, 30, 'swing');
+    });
+    $(".toLeft2").click(function(){
+        $('.pickedBox > li').eq(1).animate({scrollLeft: "-=100"}, 30, 'swing');
+    });
+    $(".toRight2").click(function(){
+        $('.pickedBox > li').eq(1).animate({scrollLeft: "+=100"}, 30, 'swing');
+    });
+    $(".toLeft3").click(function(){
+        $('.pickedBox > li').eq(2).animate({scrollLeft: "-=100"}, 30, 'swing');
+    });
+    $(".toRight3").click(function(){
+        $('.pickedBox > li').eq(2).animate({scrollLeft: "+=100"}, 30, 'swing');
+    });
+    $(".toLeft4").click(function(){
+        $('.pickedBox > li').eq(3).animate({scrollLeft: "-=100"}, 30, 'swing');
+    });
+    $(".toRight4").click(function(){
+        $('.pickedBox > li').eq(3).animate({scrollLeft: "+=100"}, 30, 'swing');
     });
 
 
