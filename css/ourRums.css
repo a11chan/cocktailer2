@@ -74,7 +74,7 @@ h4 {
 #pickingBox > li:nth-child(8) { margin-bottom:30px; }
 .pickingBoxDesc, .pickedBox { position:absolute; left:175px; top:0; }
 .pickingBoxDesc, .pickedBox li {
-    width:981px; height:62px; padding:0 20px;
+    width:981px; height:62px; padding:0 30px;
     font-size:24px; color:#333; line-height:57px; 
     border:1px solid #f5d1e9;
     border-radius:0 10px 10px 0;
@@ -92,7 +92,8 @@ h4 {
     width:1px; height:60px; background:#fff;
 }
 
-/* 필터 항목 관련 디자인 및 누르면 나타나는 효과들 */
+
+/* 메인메뉴 모양 */
 #pickingBox > li > input { display:none; }
 #pickingBox > li > label {
     display:block;
@@ -128,7 +129,7 @@ h4 {
 }
 
 
-/* 서브메뉴 형태 */
+/* 서브메뉴 모양 */
 .submenu {
     position:absolute; z-index:1;
     left:175px;
@@ -186,12 +187,58 @@ h4 {
 
 
 
-/* submenu2 선택된 항목 출력 */
-
+/* submenu2 스크롤 화살표 */
 .pickedBox > li {
     display:flex; align-items:center;
     overflow:hidden;
+    padding:0 60px;
 }
+.pickedBox .toLeft1, .pickedBox .toRight1 {
+    z-index:9;
+    position:absolute; top:10px;
+    width:21px; height: 42px;
+    cursor:pointer;
+    transition:all .4s ease-in;
+}
+.pickedBox .Lchevron {
+    left:30px;
+    background:url(../imgs/toLeft.png) no-repeat center;
+    background-size:cover; filter:invert(.5);
+}
+.pickedBox .Lchevron:hover {
+    filter:invert(.9);
+}
+.pickedBox .Rchevron {
+    right:30px;
+    background:url(../imgs/toRight.png) no-repeat center;
+    background-size:cover; filter:invert(.5);
+}
+.pickedBox .Rchevron:hover {
+    filter:invert(.9);
+}
+
+
+/* submenu2 overflow shading box */
+.pickedBox .shadeLeft1 {
+    z-index:8;
+    position:absolute; left:1px; top:1px;
+    width:80px; height:60px;
+    background:
+    /* rgba(255,255,255,.3) */
+    linear-gradient(to right,#fff 30%, rgba(33,33,33,0) 70%);
+}
+.pickedBox .shadeRight1 {
+    z-index:8;
+    position:absolute; right:1px; top:1px;
+    width:70px; height:60px;
+    border-radius:0 10px 10px 0;
+    background:
+    /* rgba(255,255,255,.3) */
+    linear-gradient(to left,#fff 30%, rgba(33,33,33,0) 70%);
+}
+
+
+/* submenu2 선택된 항목 출력 */
 .pickedBox input { display:none; }
 .pickedBox label {
     position:relative;
