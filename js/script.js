@@ -4,21 +4,22 @@ $(document).ready(function () {
     // 조건 필터링
     var tasteFilter = $(".submenu input");
     var targetList = $(".carouselBox > .itemBox");
-    // var targetList2 = $(".pickedBox > li > label");
-    targetList.hide();
-    // targetList2.hide();
-
+    var targetList2 = $(".pickedBox > li > label");
+    targetList2.hide();
+    
     tasteFilter.click(function () {
-    var targetValue = [];
-    tasteFilter.filter(":checked").each(function () {
-        targetValue.push("." + $(this).val());
-    });
+        targetList.hide();
+        targetList2.hide();
+        var targetValue = [];
+        tasteFilter.filter(":checked").each(function () {
+            targetValue.push("." + $(this).val());
+        });
 
-    var targetClass = targetValue.join(", ");
+        var targetClass = targetValue.join(", ");
 
+        $(targetClass).fadeIn();
+        console.log(targetClass);
 
-    $(targetClass).fadeIn();
-    // console.log(targetClass);
     });
 
 
@@ -29,6 +30,18 @@ $(document).ready(function () {
 
     스크립트보다는 라벨이랑 체크박스 연동해서 처리 가능한지 우선 알아보기
 
+    label for 는 input과 사촌 관계여도 되는가?
+        1. 가능
+            css로 가면 코드가 너무 늘어남, 각각의 TASTE마다 트리거 설정 필요
+        2. 불가능
+
+    그렇다면 targetClass처럼 이미 생성된 배열 활용하는 게 간단할 듯
+        선택된 클래스를 보이게
+        반대로 선택된 클래스를 .pickedBox에서 클릭하면 선택해제
+    13행에서처럼 체크된 항목을 담아서 숨겨주면 됨, 그 대상들은
+        1. pickingBox label
+        2. pickedBox label(클릭한 자기자신)
+        3. .itemBox
     */
 
 
