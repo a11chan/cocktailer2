@@ -5,10 +5,11 @@ $(document).ready(function () {
     var tasteFilter = $(".submenu input");
     var targetList = $(".carouselBox > .itemBox");
     var targetList2 = $(".pickedBox > li > label");
-    var chevron = $(".Lchevron, .Rchevron");
+    var chevron = $(".Lchevron, .Rchevron, .Bchevron");
 
+    targetList.hide();
     targetList2.hide();
-    $(".Lchevron, .Rchevron").hide();
+    chevron.hide();
     
     tasteFilter.click(function () {
         targetList.hide();

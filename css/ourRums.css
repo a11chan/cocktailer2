@@ -289,17 +289,19 @@ h4 {
 
 /* 럼 출력 슬라이더 */
 .itemShow { position:relative; }
-.toLeft{
+.Bchevron {
     z-index:9; position:absolute;
-    bottom:calc(50% - 50px); left:130px;
     cursor:pointer;
+    bottom:calc(50% - 50px); 
+    filter:invert(.7);
+    transition: all .4s ease-in;
 }
+.toLeft{ left:130px; }
+.toLeft:hover { filter:invert(.1); }
+.toRight{ right:130px; }
+.toRight:hover { filter:invert(.1); }
 
-.toRight{
-    z-index:9; position:absolute;
-    bottom:calc(50% - 50px); right:130px;
-    cursor:pointer;
-}
+
 .carouselBox {
     padding: 90px 260px 120px;
     height:855px;
