@@ -1348,7 +1348,7 @@ section span { color:#F771D1;} /* Point Color*/
     /* 럼 출력 슬라이더 모양 */
     .itemShow { position:relative; }
     .carouselBox {
-        padding:38px 0px 38px 20px;
+        padding:38px 0px 38px 28px;
         height:720px; width:100%;
         text-align:center;
         overflow:hidden;
@@ -1357,8 +1357,7 @@ section span { color:#F771D1;} /* Point Color*/
         background:url(../imgs/ourRumsCarouselBoxBg.png) no-repeat center;
         background-size:cover;
     }
-
-
+    .carouselBoxPlus { padding:38px 17px 38px 47px; } /*.addClass*/
     /* 럼 출력 슬라이더 화살표*/
     .Bchevron {
         z-index:9; position:absolute;
