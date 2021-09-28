@@ -5,14 +5,14 @@ https://a11chan.github.io/cocktailer2/
 
 
 ## To Do
-미디어 쿼리 적용
-
 마우스 누르고 있는 중에도 스크롤 구현
 
 
 &nbsp;
 &nbsp;
 ## Done
+미디어 쿼리 적용
+
 taste 별로 좌우 화살표 추가
 
 필터 적용 토글링
