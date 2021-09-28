@@ -97,10 +97,10 @@ $(document).ready(function () {
 
     // .itemShow 좌우 스크롤
     $(".toLeft").click(function(){
-        $('.carouselBox').animate({scrollLeft: "-=152"}, 30, 'swing');
+        $('.carouselBox').animate({scrollLeft: "-=90"}, 30, 'swing');
     });
     $(".toRight").click(function(){
-        $('.carouselBox').animate({scrollLeft: "+=152"}, 30, 'swing');
+        $('.carouselBox').animate({scrollLeft: "+=90"}, 30, 'swing');
     });
 
 
