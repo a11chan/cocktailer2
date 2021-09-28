@@ -25,19 +25,20 @@ $(document).ready(function () {
         var targetClass = targetValue.join(", ");
 
         $(targetClass).fadeIn(); // 선택된 클래스 전부 표시(문서전체)
-        
-        // if (targetClass == "") { chevron0.hide(); }
+
         
         if (targetClass.match(".n_")) { chevron1.fadeIn(), chevron0.fadeIn() }
-            else { chevron1.hide()}
+        else { chevron1.hide()}
         if (targetClass.match(".p_")) { chevron2.fadeIn(), chevron0.fadeIn() }
-            else { chevron2.hide()}
+        else { chevron2.hide()}
         if (targetClass.match(".f_")) { chevron3.fadeIn(), chevron0.fadeIn() }
-            else { chevron3.hide()}
+        else { chevron3.hide()}
         if (targetClass.match(".t_")) { chevron4.fadeIn(), chevron0.fadeIn() }
-            else { chevron4.hide()}
+        else { chevron4.hide()}
+        
+        if (targetClass == "") { chevronAll.hide(); }
 
-        console.log(targetClass); //함수 검증용
+        // console.log(targetClass); //함수 검증용
     });
 
 
