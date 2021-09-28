@@ -1131,6 +1131,7 @@ section span { color:#F771D1;} /* Point Color*/
     .pickingBoxDesc > li { height:100%; padding-top:9px; line-height:20px; }
     .pickedBox li { line-height:57px; }
     #pickingBox > li:nth-child(3) > .pickingBoxDesc > li { padding-right:10px; }
+    #pickingBox > li:nth-child(4) > .pickingBoxDesc > li { padding-top:18px; }
 
 
     /* 메인메뉴 제목 모양 */
