@@ -8,11 +8,12 @@ $(document).ready(function () {
     var chevron3 = $(".pickedBox > .toLeft3, .pickedBox > .toRight3, .itemShow > .Bchevron")
     var chevron4 = $(".pickedBox > .toLeft4, .pickedBox > .toRight4, .itemShow > .Bchevron")
 
+    chevron0.hide();
     targetList.hide();
     targetList2.hide();
-    chevron0.hide();
     
     tasteFilter.click(function () {
+        chevron0.hide();
         targetList.hide();
         targetList2.hide();
 
@@ -94,10 +95,10 @@ $(document).ready(function () {
 
     // .itemShow 좌우 스크롤
     $(".toLeft").click(function(){
-        $('.carouselBox').animate({scrollLeft: "-=200"}, 30, 'swing');
+        $('.carouselBox').animate({scrollLeft: "-=152"}, 30, 'swing');
     });
     $(".toRight").click(function(){
-        $('.carouselBox').animate({scrollLeft: "+=200"}, 30, 'swing');
+        $('.carouselBox').animate({scrollLeft: "+=152"}, 30, 'swing');
     });
 
 
