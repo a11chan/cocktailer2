@@ -2,18 +2,19 @@ $(document).ready(function () {
     var tasteFilter = $(".submenu input");
     var targetList = $(".carouselBox > .itemBox");
     var targetList2 = $(".pickedBox > li > label");
-    var chevron0 = $(".chevron, .Bchevron");
+    var chevronAll = $(".chevron, .Bchevron");
+    var chevron0 = $(".Bchevron");
     var chevron1 = $(".pickedBox > .toLeft1, .pickedBox > .toRight1, .itemShow > .Bchevron")
     var chevron2 = $(".pickedBox > .toLeft2, .pickedBox > .toRight2, .itemShow > .Bchevron")
     var chevron3 = $(".pickedBox > .toLeft3, .pickedBox > .toRight3, .itemShow > .Bchevron")
     var chevron4 = $(".pickedBox > .toLeft4, .pickedBox > .toRight4, .itemShow > .Bchevron")
 
-    chevron0.hide();
+    chevronAll.hide();
     targetList.hide();
     targetList2.hide();
     
     tasteFilter.click(function () {
-        chevron0.hide();
+        chevronAll.hide();
         targetList.hide();
         targetList2.hide();
 
@@ -25,15 +26,15 @@ $(document).ready(function () {
 
         $(targetClass).fadeIn(); // 선택된 클래스 전부 표시(문서전체)
         
-        if (targetClass == "") { chevron0.hide(); }
+        // if (targetClass == "") { chevron0.hide(); }
         
-        if (targetClass.match("n_")) { chevron1.fadeIn() }
+        if (targetClass.match(".n_")) { chevron1.fadeIn(), chevron0.fadeIn() }
             else { chevron1.hide()}
-        if (targetClass.match("p_")) { chevron2.fadeIn() }
+        if (targetClass.match(".p_")) { chevron2.fadeIn(), chevron0.fadeIn() }
             else { chevron2.hide()}
-        if (targetClass.match("f_")) { chevron3.fadeIn() }
+        if (targetClass.match(".f_")) { chevron3.fadeIn(), chevron0.fadeIn() }
             else { chevron3.hide()}
-        if (targetClass.match("t_")) { chevron4.fadeIn() }
+        if (targetClass.match(".t_")) { chevron4.fadeIn(), chevron0.fadeIn() }
             else { chevron4.hide()}
 
         console.log(targetClass); //함수 검증용
