@@ -38,7 +38,7 @@ $(document).ready(function () {
         
         if (targetClass == "") { chevronAll.hide(); }
 
-        // console.log(targetClass); //함수 검증용
+        console.log(targetClass); //함수 검증용
     });
 
 
