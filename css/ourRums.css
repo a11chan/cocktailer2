@@ -1177,7 +1177,7 @@ section span { color:#F771D1;} /* Point Color*/
     }
     .h3_p_tbsm {
         /* display:none; */
-        width:490px; margin:0 auto;
+        width:100%; margin:0 auto;
         text-align:center;
     }
     h4 {
