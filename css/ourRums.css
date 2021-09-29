@@ -393,7 +393,7 @@ section span { color:#F771D1;} /* Point Color*/
 
 
 /* ///// HD ///// */
-@media screen and (min-width:1050px) and (max-width:1499px) {
+@media screen and (min-width:1050px) and (max-width:1449px) {
     /* 섹션 타이틀 */
     .subTitleBox {
         height:580px; width:100%;
