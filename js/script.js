@@ -37,6 +37,7 @@ $(document).ready(function () {
         else { chevron4.hide()}
         
         if (targetClass == "") { chevronAll.hide(); }
+        if (targetClass == "") { $(".itemShow").hide(); }
 
         console.log(targetClass); //함수 검증용
     });
