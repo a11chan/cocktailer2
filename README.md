@@ -5,7 +5,6 @@ https://a11chan.github.io/cocktailer_0/
 &nbsp;
 &nbsp;
 ## Done
----
 미디어 쿼리 적용
 
 taste 별로 좌우 화살표 추가
