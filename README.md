@@ -1,16 +1,11 @@
-# Web Preview Here⬇
-
-https://a11chan.github.io/cocktailer2/
-
-
-
-## To Do
-마우스 누르고 있는 중에도 스크롤 구현
+# 국비교육 팀프로젝트 담당 영역 정적 페이지 구현
+https://a11chan.github.io/cocktailer_0/
 
 
 &nbsp;
 &nbsp;
 ## Done
+---
 미디어 쿼리 적용
 
 taste 별로 좌우 화살표 추가
